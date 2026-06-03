@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base href="../">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phácis Clinic · Dra. Poliana Freitas · Todos os links</title>
+<meta name="description" content="Phácis Clinic em Uberaba MG. Dra. Poliana Freitas. Agende pelo WhatsApp, conheça os procedimentos, veja o Instagram e mais.">
+<meta name="theme-color" content="#1a1612">
+<meta property="og:title" content="Phácis Clinic · Todos os links">
+<meta property="og:description" content="Estética com técnica, ciência e naturalidade. Agende sua avaliação.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/logo/phacis-logo.png">
+
+<style>
+  :root {
+    --cream:         #f3ede4;
+    --cream-soft:    #ebe3d6;
+    --cream-deep:    #e0d4c1;
+    --nude:          #c9b8a3;
+    --chocolate:     #6b4f3a;
+    --chocolate-l:   #8c6850;
+    --chocolate-d:   #4a3526;
+    --black-soft:    #1a1612;
+    --ink:           #0e0a08;
+    --gold:          #b89243;
+    --gold-l:        #d4a85a;
+    --grad-nude:     linear-gradient(135deg, var(--nude), var(--chocolate), var(--chocolate-d));
+    --grad-gold:     linear-gradient(135deg, var(--gold), var(--gold-l), var(--gold));
+    --serif:         "Cormorant Garamond", Georgia, serif;
+    --sans:          "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --ease:          cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--sans);
+    background: var(--black-soft);
+    color: var(--cream);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .bg-glow {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 70% at 20% 20%, rgba(107, 79, 58, 0.4) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 80% 80%, rgba(184, 146, 67, 0.18) 0%, transparent 65%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201, 184, 163, 0.06) 0%, transparent 70%),
+      var(--black-soft);
+  }
+  .bg-grain {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 3rem 1.4rem 2.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s var(--ease) 0.1s forwards;
+  }
+  .logo {
+    width: 110px; height: 110px;
+    margin: 0 auto 1.4rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream);
+    padding: 6px;
+    box-shadow:
+      0 0 0 2px rgba(184, 146, 67, 0.55),
+      0 0 0 3px rgba(255,255,255,0.05),
+      0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  .logo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+  .logo::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--gold), var(--nude), var(--gold-l), var(--chocolate-l), var(--gold));
+    z-index: -1;
+    animation: spin 10s linear infinite;
+    opacity: 0.5;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .brand-name {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .brand-name em {
+    font-style: italic;
+    color: var(--gold-l);
+    letter-spacing: 0;
+  }
+  .brand-handle {
+    font-size: 0.85rem;
+    color: rgba(243, 237, 228, 0.65);
+    margin-bottom: 0.7rem;
+  }
+  .brand-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(243, 237, 228, 0.82);
+    max-width: 320px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .stats-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(184, 146, 67, 0.3);
+    padding: 0.55rem 1rem;
+    border-radius: 100px;
+    margin: 1rem auto 0;
+    font-size: 0.74rem;
+    color: var(--cream);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s var(--ease) 0.25s forwards;
+  }
+  .stats-row strong { color: var(--gold-l); font-weight: 700; }
+  .stats-row .stars { color: var(--gold-l); letter-spacing: 0.06em; }
+  .stats-row .sep {
+    width: 4px; height: 4px;
+    background: rgba(184, 146, 67, 0.5);
+    border-radius: 50%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 2rem;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    color: var(--cream);
+    text-decoration: none;
+    transition: all 0.35s var(--ease);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s var(--ease) forwards;
+  }
+  .link:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(184, 146, 67, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+  .link__icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--gold-l);
+    transition: all 0.3s var(--ease);
+  }
+  .link:hover .link__icon {
+    background: var(--gold);
+    color: var(--ink);
+    transform: scale(1.06);
+  }
+  .link__body { flex: 1; min-width: 0; }
+  .link__title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  .link__sub {
+    font-size: 0.74rem;
+    color: rgba(243, 237, 228, 0.6);
+    margin-top: 2px;
+    line-height: 1.3;
+    font-family: var(--sans);
+  }
+  .link__arrow {
+    flex-shrink: 0;
+    color: rgba(243, 237, 228, 0.5);
+    transition: all 0.3s var(--ease);
+  }
+  .link:hover .link__arrow {
+    color: var(--gold-l);
+    transform: translateX(4px);
+  }
+
+  /* Site primary - gradient nude */
+  .link--site-primary {
+    background: linear-gradient(135deg, var(--chocolate-d) 0%, var(--chocolate) 100%);
+    border-color: rgba(184, 146, 67, 0.4);
+    isolation: isolate;
+  }
+  .link--site-primary::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0) 30%, rgba(212, 168, 90, 0.55) 50%, rgba(255,255,255,0) 70%, transparent 100%);
+    transform: skewX(-20deg);
+    z-index: 1;
+    animation: featuredFlash 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+    pointer-events: none;
+  }
+  .link--site-primary .link__icon {
+    background: rgba(184, 146, 67, 0.25);
+    color: var(--gold-l);
+  }
+  .link--site-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(107, 79, 58, 0.55);
+    border-color: var(--gold);
+  }
+
+  /* VIP highlight - subtle gold tint with badge */
+  .link--vip {
+    background: linear-gradient(135deg, rgba(184, 146, 67, 0.18) 0%, rgba(212, 168, 90, 0.08) 100%);
+    border: 1px solid rgba(184, 146, 67, 0.45);
+    isolation: isolate;
+  }
+  .link--vip::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 40%; height: 100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(212, 168, 90, 0) 30%, rgba(212, 168, 90, 0.35) 50%, rgba(212, 168, 90, 0) 70%, transparent 100%);
+    transform: skewX(-20deg);
+    z-index: 1;
+    animation: featuredFlash 5s ease-in-out infinite;
+    animation-delay: 2.5s;
+    pointer-events: none;
+  }
+  .link--vip:hover {
+    background: linear-gradient(135deg, rgba(184, 146, 67, 0.28) 0%, rgba(212, 168, 90, 0.15) 100%);
+    border-color: var(--gold);
+    box-shadow: 0 14px 36px rgba(184, 146, 67, 0.4);
+  }
+  .link--vip .link__icon {
+    background: var(--grad-gold);
+    color: var(--ink);
+  }
+  .link__badge {
+    display: inline-block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--ink);
+    background: var(--grad-gold);
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-left: 6px;
+    vertical-align: 2px;
+  }
+
+  /* WhatsApp featured - gold */
+  .link--featured {
+    background: var(--grad-gold);
+    border-color: transparent;
+    isolation: isolate;
+    color: var(--ink);
+  }
+  .link--featured::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 70%, transparent 100%);
+    transform: skewX(-20deg);
+    z-index: 1;
+    animation: featuredFlash 3.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes featuredFlash {
+    0% { left: -100%; }
+    50% { left: 130%; }
+    100% { left: 130%; }
+  }
+  .link--featured .link__icon {
+    background: rgba(14, 10, 8, 0.18);
+    color: var(--ink);
+  }
+  .link--featured .link__title { color: var(--ink); font-style: italic; }
+  .link--featured .link__sub { color: rgba(14, 10, 8, 0.7); }
+  .link--featured .link__arrow { color: var(--ink); }
+  .link--featured:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(184, 146, 67, 0.5);
+  }
+
+  .link--whatsapp .link__icon { background: rgba(37, 211, 102, 0.18); color: #25D366; }
+  .link--whatsapp:hover .link__icon { background: #25D366; color: var(--cream); }
+  .link--google .link__icon { background: rgba(255, 255, 255, 0.95); color: var(--ink); }
+  .link--instagram .link__icon {
+    background: linear-gradient(135deg,#feda75 0%,#fa7e1e 25%,#d62976 50%,#962fbf 75%,#4f5bd5 100%);
+    color: var(--cream);
+  }
+  .link--maps .link__icon { background: rgba(52, 168, 83, 0.18); color: #34A853; }
+  .link--maps:hover .link__icon { background: #34A853; color: var(--cream); }
+  .link--phone .link__icon { background: rgba(107, 79, 58, 0.35); color: var(--nude); }
+
+  .links-section-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(243, 237, 228, 0.55);
+    text-align: center;
+    margin: 2rem 0 0.5rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeUp 0.6s var(--ease) forwards;
+  }
+  .links-section-title::before,
+  .links-section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 1px;
+    background: rgba(184, 146, 67, 0.3);
+  }
+  .links-section-title::before { right: calc(50% + 9rem); }
+  .links-section-title::after  { left:  calc(50% + 9rem); }
+
+  .links .link:nth-child(1)  { animation-delay: 0.40s; }
+  .links .link:nth-child(2)  { animation-delay: 0.46s; }
+  .links .link:nth-child(3)  { animation-delay: 0.52s; }
+  .links .link:nth-child(4)  { animation-delay: 0.58s; }
+  .links .link:nth-child(5)  { animation-delay: 0.64s; }
+  .links .link:nth-child(6)  { animation-delay: 0.70s; }
+  .links .link:nth-child(7)  { animation-delay: 0.76s; }
+  .links .link:nth-child(8)  { animation-delay: 0.82s; }
+  .links-section-title:nth-of-type(1) { animation-delay: 0.85s; }
+  .links-section-title:nth-of-type(2) { animation-delay: 1.05s; }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 2.2rem 0 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s var(--ease) 1.2s forwards;
+  }
+  .social {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    place-items: center;
+    color: var(--cream);
+    transition: all 0.3s var(--ease);
+  }
+  .social:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--gold);
+    color: var(--gold-l);
+  }
+  .social--insta:hover {
+    background: linear-gradient(135deg,#feda75 0%,#fa7e1e 25%,#d62976 50%,#962fbf 75%,#4f5bd5 100%);
+    border-color: transparent;
+    color: var(--cream);
+  }
+  .social--whats:hover {
+    background: #25D366;
+    border-color: #25D366;
+    color: var(--cream);
+  }
+  .social--phone:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: rgba(243, 237, 228, 0.4);
+    opacity: 0;
+    animation: fadeUp 0.6s var(--ease) 1.4s forwards;
+  }
+  .footer a {
+    color: rgba(243, 237, 228, 0.65);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer a:hover { color: var(--gold-l); }
+
+  /* CTA Zebubit - quero uma bio assim */
+  .bio-cta {
+    margin: 1.5rem 0 0.5rem;
+    padding: 1.1rem 1.3rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(107, 79, 58, 0.4) 0%, rgba(26, 22, 18, 0.5) 100%);
+    border: 1px dashed rgba(184, 146, 67, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    text-decoration: none;
+    color: var(--cream);
+    transition: all 0.3s var(--ease);
+  }
+  .bio-cta:hover {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(107, 79, 58, 0.55) 0%, rgba(26, 22, 18, 0.6) 100%);
+    transform: translateY(-2px);
+  }
+  .bio-cta__icon { font-size: 1.4rem; flex-shrink: 0; }
+  .bio-cta__title { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--gold-l); }
+  .bio-cta__sub { font-size: 0.72rem; color: rgba(243, 237, 228, 0.6); margin-top: 1px; }
+
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .container { padding: 2rem 1rem; }
+    .logo { width: 90px; height: 90px; }
+    .brand-name { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="bg-grain" aria-hidden="true"></div>
+
+<main class="container">
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/logo/phacis-logo.png" alt="Phácis Clinic">
+    </div>
+    <h1 class="brand-name">PHÁCIS <em>Clinic</em></h1>
+    <div class="brand-handle">@phacisclinic · Uberaba MG</div>
+    <p class="brand-tagline">Estética com técnica, ciência e naturalidade. Dra. Poliana Freitas.</p>
+
+    <div class="stats-row">
+      <span><strong>4,9</strong> <span class="stars">★★★★★</span></span>
+      <span class="sep"></span>
+      <span><strong>4.562</strong> avaliações</span>
+      <span class="sep"></span>
+      <span><strong>26,2K</strong> seguidores</span>
+    </div>
+  </header>
+
+  <nav class="links" aria-label="Links principais">
+
+    <a class="link link--site-primary" href="index.html">
+      <div class="link__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Visitar nosso site</div>
+        <div class="link__sub">Procedimentos, ambiente, antes e depois</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link link--featured" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.115 1.524 5.85L.06 23.94l6.235-1.636A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Agendar pelo WhatsApp</div>
+        <div class="link__sub">Atendimento personalizado</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link link--vip" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20entrar%20no%20Grupo%20de%20Vantagens%20VIP." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6.2 4.5 2.4 7.3L12 16.5 5.8 21l2.4-7.3L2 9.2h7.6z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Grupo de Vantagens<span class="link__badge">VIP</span></div>
+        <div class="link__sub">Promoções exclusivas, lançamentos e bastidores</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link link--vip" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Imers%C3%A3o%20VIP%20Facial%2C%20Capilar%20e%20Corporal." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M7 11v5l5 3 5-3v-5"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Imersão VIP<span class="link__badge">CURSOS</span></div>
+        <div class="link__sub">Facial, Capilar e Corporal · Para profissionais</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+  </nav>
+
+  <div class="links-section-title">Protocolos exclusivos</div>
+
+  <nav class="links" aria-label="Procedimentos">
+
+    <a class="link" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20Harmoniza%C3%A7%C3%A3o%20Facial." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c2 2 6 2 8 0M8 9h0.01M16 9h0.01"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Harmonização Facial</div>
+        <div class="link__sub">Equilíbrio dos terços do rosto</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20Rinomodela%C3%A7%C3%A3o." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4c0 4-2 8-2 12s4 4 6 4 6 0 6-4-2-8-2-12"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Rinomodelação</div>
+        <div class="link__sub">Refinamento do nariz sem cirurgia</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20Lipo%20de%20Papada." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9c0-4 3-7 6-7s6 3 6 7-3 7-6 9c-3-2-6-5-6-9z"/><circle cx="12" cy="9" r="2"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Lipo de Papada</div>
+        <div class="link__sub">Definição do contorno mandibular</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20Bioestimuladores%20de%20Col%C3%A1geno." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Bioestimuladores</div>
+        <div class="link__sub">Estímulo de colágeno para firmeza</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20SPA%20Laser." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">SPA Laser</div>
+        <div class="link__sub">Protocolo proprietário Phácis</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link" href="https://wa.me/553433115200?text=Ol%C3%A1%20Ph%C3%A1cis!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20saber%20mais%20sobre%20Terapia%20Capilar." target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c0-5 4-7 8-7s8 2 8 7c0 4-2 6-3 8s-1 5-1 5h-8s0-3-1-5-3-4-3-8z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Terapia Capilar</div>
+        <div class="link__sub">Tratamento de calvície e queda</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+  </nav>
+
+  <div class="links-section-title">Mais</div>
+
+  <nav class="links" aria-label="Mais links">
+
+    <a class="link link--maps" href="https://www.google.com/maps/search/?api=1&query=Ph%C3%A1cis+Clinic+Uberaba" target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Como chegar</div>
+        <div class="link__sub">Av. Leopoldino de Oliveira · Estados Unidos, Uberaba</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link link--google" href="https://www.google.com/maps/search/?api=1&query=Ph%C3%A1cis+Clinic+Uberaba" target="_blank" rel="noopener">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Avalie no Google</div>
+        <div class="link__sub">4,9 · +4.562 avaliações verificadas</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link link--phone" href="tel:+553433115200">
+      <div class="link__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div class="link__body">
+        <div class="link__title">Ligar agora</div>
+        <div class="link__sub">(34) 3311-5200 · Atendimento direto</div>
+      </div>
+      <svg class="link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+  </nav>
+
+  <div class="socials" aria-label="Redes sociais">
+    <a class="social social--insta" href="https://instagram.com/phacisclinic" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a class="social social--whats" href="https://wa.me/553433115200" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.115 1.524 5.85L.06 23.94l6.235-1.636A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+    </a>
+    <a class="social social--phone" href="tel:+553433115200" aria-label="Telefone">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <a class="bio-cta" href="https://wa.me/5534993421500?text=Ol%C3%A1%2C%20Dione!%20Quero%20um%20link%20da%20bio%20igual%20a%20esse." target="_blank" rel="noopener">
+    <span class="bio-cta__icon">✨</span>
+    <div class="link__body">
+      <div class="bio-cta__title">Quero um link da bio igual a esse</div>
+      <div class="bio-cta__sub">Fale com a Zebubit e profissionalize sua presença online</div>
+    </div>
+  </a>
+
+  <footer class="footer">
+    © 2026 Phácis Clinic · Dra. Poliana Freitas<br>
+    Desenvolvido por <a href="https://zebubit.com.br" target="_blank" rel="noopener">Zebubit Assessoria</a>
+  </footer>
+
+</main>
+
+</body>
+</html>
